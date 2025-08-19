@@ -1,0 +1,96 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: #fff0f5;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  color: #e91e63;
+}
+
+.texto{
+    text-align: justify;
+    font-family:'Times New Roman', Times, serif
+}
+
+.carrossel {
+  position: relative;
+  width: 800px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides-container {
+  display: flex;
+  align-items: center; 
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+#contador {
+  font-size: 20px;
+  color: #e91e63;
+  font-weight: bold;
+  margin: 20px 0 40px 0;
+}
+
+/* Canvas do confete */
+#confeteCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+/* Corações subindo */
+#coracoesContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 1001;
+}
+
+.coracao {
+  position: absolute;
+  font-size: 20px;
+  color: #e91e63;
+  opacity: 0.8;
+  animation: subir 4s linear infinite;
+}
+
+@keyframes subir {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-800px) scale(1.2);
+    opacity: 0;
+  }
+}
+
